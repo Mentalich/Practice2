@@ -35,28 +35,27 @@ using namespace std; // Используем стандартную библио
     Помимо вычислений, каждый метод должен делать аккуратный вывод результата в консоль
     */
 
-int main()
-{
-    Console::SetUnicode();
-    // Подзадача 1
-
-    // Для проверки задания: снять комментарии, заполнить методы переменными, 
-    // запустить и посмотреть консольный вывод
-    // Calculator::CircleArea();
-    // Calculator::RectangleArea();
-    // Calculator::TriangleArea();
-    // Calculator::TriangleArea();
-}
-
 class Calculator
 {
 public:
 
+    /// <summary>
+    /// Вычисляет сумму двух чисел с плавающей запятой
+    /// </summary>
+    /// <param name="a">Первое значение</param>
+    /// <param name="b">Второе значение</param>
+    /// <returns>Итоговая сумма</returns>
     static double Sum(double a, double b)
     {
-        // Я молодец и всё сделала :)
-    }
+        // Вычисляем
+        double sum = a + b;
+        // Округляем
+        double result = round(sum * 100.0) / 100.0;
+        // Выводим в консоль рассчёты
+        cout << "Сумма: " << sum << endl;
 
+        return sum;
+    }
 
     // Подзадача 2
     static double CircleArea(double radius)
@@ -82,3 +81,17 @@ public:
         return 0;
     }
 };
+
+int main()
+{
+    Console::SetRussianOnWindows();
+    // Подзадача 1
+
+    // Для проверки задания: снять комментарии, заполнить методы переменными, 
+    // запустить и посмотреть консольный вывод
+    Calculator::Sum(3., 5.);
+    // Calculator::CircleArea();
+    // Calculator::RectangleArea();
+    // Calculator::TriangleArea();
+    // Calculator::TriangleArea();
+}
