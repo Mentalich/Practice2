@@ -52,9 +52,10 @@ class Calculator
 {
 public:
 
-
-
-
+    static double Sum(double a, double b)
+    {
+        // Я молодец и всё сделала :)
+    }
 
 
     // Подзадача 2
