@@ -56,8 +56,8 @@ public:
 	/// <summary>
 	/// Данный код подключает русский язык в консоль
 	/// </summary>
-	static void SetUnicode()
+	static void SetRussianOnWindows()
 	{
-		setlocale(LC_ALL, ".UTF8"); // Переводим кодировку в юникод для подключения кириллицы
+		system("chcp 1251"); // Переводим кодировку в стандартную русскую для подключения кириллицы
 	}
 };
